@@ -11,6 +11,54 @@ This project simulates the growth and development of mixed-species forests over 
 - Management interventions (beating up)
 - Financial considerations
 
+## User Guide
+
+### Key Parameters to Consider
+
+When running the simulation, you may want to adjust these key parameters in `main.py`. Below are the most important parameters grouped by category, with their default values and explanations.
+
+#### 🌳 Site Parameters
+| Parameter | Default | Description |
+|-----------|---------|-------------|
+| `site_area` | 1 | Area of forest in hectares |
+| `simulation_years` | 30 | Duration of simulation |
+| `num_iterations` | 5 | Number of Monte Carlo iterations (increase for more robust results) |
+
+#### 🌱 Planting Strategy
+| Parameter | Default | Description |
+|-----------|---------|-------------|
+| `initial_stocking_density` | 2500 | Trees per hectare |
+| `species_mix` | `{"scots_pine": 0.7, "birch": 0.3}` | Proportion of each species |
+| `overstocking_percentage` | 0.2 | Extra trees planted as buffer (20%) |
+
+#### 🌪️ Environmental Risk Factors
+| Parameter | Default | Description |
+|-----------|---------|-------------|
+| `drought_probability` | 0.1 | Annual chance of drought |
+| `flood_probability` | 0.05 | Annual chance of flooding |
+| `windthrow_probability` | 0.08 | Annual chance of windthrow |
+| `disease_probability` | 0.03 | Annual chance of disease |
+
+#### 👨‍🌾 Management Parameters
+| Parameter | Default | Description |
+|-----------|---------|-------------|
+| `beating_up_threshold` | 2000 | Minimum acceptable trees/ha |
+| `beating_up_years` | [2,3,4] | Years to perform replanting |
+| `beating_up_cost_base` | £2.00 | Cost per replacement tree |
+| `max_beating_up_age` | 5 | Maximum age for beating up operations |
+
+#### 💰 Financial Parameters
+| Parameter | Default | Description |
+|-----------|---------|-------------|
+| `initial_planting_cost` | £1.50 | Cost per tree |
+| `grant_rate_per_hectare` | £350.00 | Government grant amount |
+| `carbon_price_per_tonne` | £20.00 | Carbon credit value |
+| `discount_rate` | 0.035 | Annual discount rate (3.5%) |
+
+### Example Scenarios
+
+#### Dry Site Conditions
+
 ## Key Features
 
 ### Forest Simulation
